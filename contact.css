@@ -138,26 +138,36 @@ body {
     display: inline-block;
 }
 
-.home-button {
+.button-container {
     position: fixed;
-    margin-top: 100px;
-    left:50%;
-    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 100px;
+}
+
+.home-button, .contact-button, .projects-button {
     font-family: "Onest", serif;
     color: #ffffff;
     font-size: 20px;
     text-align: center;
     border: 1px solid #ffffff;
-    padding: 10px 20px;
+    padding: 8px 18px;
     text-decoration: none;
 	display: inline-block;
     border-radius: 20px;
+    margin: 0 10px;
+    font-weight: 400;
+    transition: transform 0.3s ease, letter-spacing 0.3s ease;
 }
 
-.home-button:hover {
-   background-color: #ffffff;
-   color: #2ba68d;
-   transition: background-color 0.2s ease;
+.home-button:hover, .contact-button:hover, .projects-button:hover {
+    transform: scale(1.1);
+    letter-spacing: 2px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: rgb(33, 122, 122);
+    font-weight: 600;
 }
 
 .copyright {
@@ -174,6 +184,10 @@ body {
 
 
 @media (max-width: 768px) {
+    .home-button, .contact-button, .projects-button {
+        font-size: 17px;
+        padding: 8px 16px;
+    }
     .gmail p, .linkedin p, .ins p {
         font-size: 80%;
     }
